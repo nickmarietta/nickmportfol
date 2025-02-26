@@ -65,13 +65,13 @@
             <p>Here's my work!</p>
         </a>
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-10">
-            <Step step={steps[0]}>
+            <Step href="https://github.com/owendevita/Silverware" step={steps[0]}>
                 <p>SilverWare is a web application that is designed for restaurant rwners to customize the layout of their store. Created with <strong class="text-violet-400">ReactJS, Django, AWS, SQLite</strong>.</p>
             </Step>
-            <Step step={steps[1]}>
+            <Step href="https://github.com/nickmarietta/FullyHacks2024LLP" step={steps[1]}>
                 <p>The Aprendizaje is a Hackathon submission that helps users learn Spanish through different game modes with matching and listening practice. Developed with <strong class="text-violet-400">Python, PyGame</strong>.</p>
             </Step>
-            <Step step={steps[2]}>
+            <Step href="https://github.com/nickmarietta/LineupList" step={steps[2]}>
                 <p>LineUpList is a website that shows the lineups and formation of current and past soccer clubs from around the world. <strong class="text-violet-400">Work in Progress!</strong></p>
             </Step>
         </div>
