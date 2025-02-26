@@ -8,9 +8,9 @@
   ]
 
   let benefits = [
-    {name: "an aspiring software engineer", description: "I have always been interested with technology in the CS field and love the process of building ideas. With the vast world of technology, I believe that the process of continuous learning makes it very fun."},
-    {name: "a video enthusiast", description: "Video games have always been my gateway into the world of technology. I see them as a powerful medium for creativity, storytelling, and innovation—bringing people's passions and ideas to life in an interactive way"},
-    {name: "a passionate language learner", description: "Learning new languages and cultures has been one of my favorite hobbies. I love the process because it shows how diverse and different the world can be."},
+    {name: "an aspiring software engineer", description: "I have always been interested with technology in the CS field and love the process of building ideas. With the vast world of technology, I believe that continuous learning journey makes it very fun."},
+    {name: "a video game enthusiast", description: "Video games have always been my gateway into the world of technology. I see them as a powerful medium for creativity, storytelling, and innovation—bringing people's passions and ideas to life in an interactive way."},
+    {name: "a passionate learner", description: "Learning new computer and spoken languages has been one of my favorite hobbies. I love the process because it shows how diverse and different the world can be in various aspects."},
   ]
 
 </script>
@@ -40,7 +40,7 @@
                 <span class="text-violet-400">favorite tech</span> includes JS (ReactJS,
                 SvelteKit), C++, and Python.
             </p>
-            <a href="https://www.linkedin.com/in/nicklaus-marietta/" target="_blank" class="blueShadow mx-auto lg:mr-auto text-base sm:text-lg md:text-xl lato relative overflow-hidden px-6 py-3 group rounded-full bg-white text-slate-950 cursor-pointer">
+            <a href="https://www.linkedin.com/in/nicklaus-marietta/" target="_blank" class="blueShadow mx-auto lg:mr-auto lg:ml-0 text-base sm:text-lg md:text-xl lato relative overflow-hidden px-6 py-3 group rounded-full bg-white text-slate-950 cursor-pointer">
                 <div class="absolute top-0 right-full w-full h-full bg-violet-400 opacity-20 group-hover:translate-x-full z-0 duration-200">
                 </div>
                 <h4 class="relative z-9">Get in touch &rarr;</h4>
@@ -60,9 +60,9 @@
                 Curious to <span class="lato text-violet-400">see</span> my work?
             </h3>
         </div>
-        <a href="https://www.youtube.com/watch?v=fyXIezpxFi0&ab_channel=Enjambre" target="_blank" class="mx-auto px-4 py-2 rounded-md border border-solid border-white flex items-center gap-2 -mb-4 sm:-mb-0 -mt-10 hover:border-violet-700 duration-200">
-            <i class="fa-regular fa-circle-play"></i>
-            <p>Watch the video!</p>
+        <a href="https://github.com/nickmarietta" target="_blank" class="mx-auto px-4 py-2 rounded-md border border-solid border-white flex items-center gap-2 -mb-4 sm:-mb-0 -mt-10 hover:border-violet-700 duration-200">
+            <i class="fa-brands fa-github"></i>
+            <p>Here's my work!</p>
         </a>
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-10">
             <Step step={steps[0]}>
@@ -97,7 +97,7 @@
             </div>
             {/each}    
         </div>
-        <h5>The <span class="text-violet-400">Complete</span> Package</h5>
+        <h5 class="text-2xl sm:text-3xl font-semibold text-center lato">The <span class="text-violet-400">Complete</span> Package</h5>
         <div class="flex flex-col overflow-x-scroll gap-10 max-w-[800px] mx-auto w-full">
             <table class="bg-white text-slate-700 rounded text-center">
                 <thead class="border-b border-solid border-slate-200">
@@ -112,14 +112,39 @@
                 </thead>
                 <tbody>
                     <tr class="border-b border-solid border-slate-200">
-                        <td class="border-r border-solid border-white pl-4 pr-8 py-4 font-semibold text-sm">Dedication</td>
+                        <td class="border-r border-solid border-white pl-4 pr-8 py-4 font-semibold text-sm whitespace-nowrap">Dedication</td>
+                        <td><i class="fa-solid fa-xmark text-slate-500"></i></td>
+                        <td><i class="fa-solid fa-check text-slate-500"></i></td>
+                        <td><i class="fa-solid fa-xmark text-slate-500"></i></td>
+                        <td><i class="fa-solid fa-check text-green-500"></i></td>
+                    </tr>
+                    <tr class="border-b border-solid border-slate-200">
+                        <td class="border-r border-solid border-white pl-4 pr-8 py-4 font-semibold text-sm whitespace-nowrap">Critical Thought</td>
+                        <td><i class="fa-solid fa-xmark text-slate-500"></i></td>
+                        <td><i class="fa-solid fa-check text-slate-500"></i></td>
+                        <td><i class="fa-solid fa-check text-slate-500"></i></td>
+                        <td><i class="fa-solid fa-check text-green-500"></i></td>
+                    </tr>
+                    <tr class="border-b border-solid border-slate-200">
+                        <td class="border-r border-solid border-white pl-4 pr-8 py-4 font-semibold text-sm whitespace-nowrap">Interpersonal Skills</td>
+                        <td><i class="fa-solid fa-check text-slate-500"></i></td>
                         <td><i class="fa-solid fa-xmark text-slate-500"></i></td>
                         <td><i class="fa-solid fa-xmark text-slate-500"></i></td>
+                        <td><i class="fa-solid fa-check text-green-500"></i></td>
+                    </tr>
+                    <tr class="border-b border-solid border-slate-200">
+                        <td class="border-r border-solid border-white pl-4 pr-8 py-4 font-semibold text-sm whitespace-nowrap">Programming Ability</td>
+                        <td><i class="fa-solid fa-check text-slate-500"></i></td>
                         <td><i class="fa-solid fa-xmark text-slate-500"></i></td>
-                        <td><i class="fa-solid fa-xmark text-green-500"></i></td>
+                        <td><i class="fa-solid fa-check text-slate-500"></i></td>
+                        <td><i class="fa-solid fa-check text-green-500"></i></td>
                     </tr>
                 </tbody>
             </table>
         </div>
+        <div class="mx-auto -mt-12 italic sm:hidden opacity-50">
+            <p>Scroll to see more &rarr;</p>
+        </div>
+        <p class="mx-auto">So why not invest?</p>
     </section>
 </main>
