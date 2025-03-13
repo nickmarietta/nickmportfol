@@ -95,51 +95,35 @@
                     <p>{benefit.description}</p>
                 </div>    
             </div>
-            {/each}    
+            {/each}
         </div>
         <h5 class="text-2xl sm:text-3xl font-semibold text-center lato">My <span class="text-violet-400">Skills</span></h5>
-        <div class="flex flex-col overflow-x-scroll gap-10 max-w-[800px] mx-auto w-full">
-            <table class="bg-white text-slate-700 rounded text-center">
-                <thead class="border-b border-solid border-slate-200">
-                    <tr class="">
-                        <th>
-                        </th>
-                        <th class="whitespace-nowrap p-2 px-4">Beginner</th>
-                        <th class="whitespace-nowrap p-2 px-4">Intermediate</th>
-                        <th class="whitespace-nowrap p-2 px-4">Advanced</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="border-b border-solid border-slate-200">
-                        <td class="border-r border-solid border-white pl-4 pr-8 py-4 font-semibold text-sm whitespace-nowrap">Dedication</td>
-                        <td><i class="fa-solid fa-xmark text-slate-500"></i></td>
-                        <td><i class="fa-solid fa-check text-slate-500"></i></td>
-                        <td><i class="fa-solid fa-xmark text-slate-500"></i></td>
-                    </tr>
-                    <tr class="border-b border-solid border-slate-200">
-                        <td class="border-r border-solid border-white pl-4 pr-8 py-4 font-semibold text-sm whitespace-nowrap">Critical Thought</td>
-                        <td><i class="fa-solid fa-xmark text-slate-500"></i></td>
-                        <td><i class="fa-solid fa-check text-slate-500"></i></td>
-                        <td><i class="fa-solid fa-check text-slate-500"></i></td>
-                    </tr>
-                    <tr class="border-b border-solid border-slate-200">
-                        <td class="border-r border-solid border-white pl-4 pr-8 py-4 font-semibold text-sm whitespace-nowrap">Interpersonal Skills</td>
-                        <td><i class="fa-solid fa-check text-slate-500"></i></td>
-                        <td><i class="fa-solid fa-xmark text-slate-500"></i></td>
-                        <td><i class="fa-solid fa-xmark text-slate-500"></i></td>
-                    </tr>
-                    <tr class="border-b border-solid border-slate-200">
-                        <td class="border-r border-solid border-white pl-4 pr-8 py-4 font-semibold text-sm whitespace-nowrap">Programming Ability</td>
-                        <td><i class="fa-solid fa-check text-slate-500"></i></td>
-                        <td><i class="fa-solid fa-xmark text-slate-500"></i></td>
-                        <td><i class="fa-solid fa-check text-slate-500"></i></td>
-                    </tr>
-                </tbody>
-            </table>
+        <div class="flex flex-col gap-10 max-w-[800px] mx-auto w-full">
+            <!-- svelte-ignore this is the part where we want to include our skills -->
+            <div class="flex justify-between mb-1">
+                <span class="text-base h-1 font-medium text-blue-700 dark:text-white">C++</span>
+            </div>
+            <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+            <div class="bg-blue-600 h-2.5 rounded-full" style="width: 90%"></div>
+            </div>
+            <div class="flex justify-between mb-1">
+                <span class="text-base h-1 font-medium text-blue-700 dark:text-white">Python</span>
+            </div>
+            <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+            <div class="bg-blue-600 h-2.5 rounded-full" style="width: 80%"></div>
+            </div>
+            <div class="flex justify-between mb-1">
+                <span class="text-base h-1 font-medium text-blue-700 dark:text-white">JavaScript</span>
+            </div>
+            <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+            <div class="bg-blue-600 h-2.5 rounded-full" style="width: 85%"></div>
+            </div>
+            <div class="flex justify-between mb-1">
+                <span class="text-base h-1 font-medium text-blue-700 dark:text-white">HTML/CSS</span>
+            </div>
+            <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+            <div class="bg-blue-600 h-2.5 rounded-full" style="width: 100%"></div>
+            </div>
         </div>
-        <div class="mx-auto -mt-12 italic sm:hidden opacity-50">
-            <p>Scroll to see more &rarr;</p>
-        </div>
-        <p class="mx-auto">So why not invest?</p>
     </section>
 </main>
