@@ -2,6 +2,7 @@
     import "../app.css";
     import Header from "../components/Header.svelte";
     import Footer from "../components/Footer.svelte";
+    import SkillTree from "../components/SkillTree.svelte";
 
     let y = 0;
     let innerHeight = 0;
@@ -24,6 +25,7 @@
     <Header y={y}/>
 
     <slot /> <!-- Old SvelteKit uses <slot> instead of {@render} -->
+    <SkillTree />
 
     <Footer />
 </div>
