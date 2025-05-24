@@ -20,7 +20,7 @@ h3 .poppins {
   width: 270px;
 }
 
-.card .github, .card .linkedin, .card .email {
+.github, .card .linkedin, .card .email {
   position: relative;
   display: flex;
   align-items: center;
@@ -94,11 +94,9 @@ h3 .poppins {
   justify-content: center;
   color: var(--default-btn-color);
   font: var(--font-weight) var(--font-size) var(--font-family);
-  background: var(--btn-default-bg);
   border: none;
   transition: var(--btn-transition);
   overflow: hidden;
-  box-shadow: var(--btn-shadow);
 }
 
 .ui-btn span {
