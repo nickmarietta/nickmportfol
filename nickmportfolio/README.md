@@ -1,38 +1,69 @@
-# sv
+# Nicklaus Marietta - Portfolio
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+A clean, professional portfolio website built with SvelteKit and Tailwind CSS.
 
-## Creating a project
+## Features
 
-If you're seeing this, you've probably already done this step. Congrats!
+- **Modern Design**: Clean, professional layout with dark theme
+- **Responsive**: Fully responsive design that works on all devices
+- **Fast**: Built with SvelteKit for optimal performance
+- **Accessible**: Semantic HTML and proper accessibility features
 
-```bash
-# create a new project in the current directory
-npx sv create
+## Sections
 
-# create a new project in my-app
-npx sv create my-app
+- **Hero**: Introduction and call-to-action
+- **Projects**: Showcase of key projects with descriptions
+- **About**: Personal background and interests
+- **Skills**: Technical skills with progress indicators
+- **Contact**: Social links and contact information
+
+## Tech Stack
+
+- **Framework**: SvelteKit
+- **Styling**: Tailwind CSS
+- **Icons**: Font Awesome
+- **Deployment**: Vercel (configured)
+
+## Getting Started
+
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+2. Start development server:
+   ```bash
+   npm run dev
+   ```
+
+3. Build for production:
+   ```bash
+   npm run build
+   ```
+
+## Project Structure
+
+```
+src/
+├── components/
+│   ├── Header.svelte      # Navigation header
+│   ├── Footer.svelte      # Footer with social links
+│   ├── Main.svelte        # Main content sections
+│   ├── Step.svelte        # Project card component
+│   └── CardBody.svelte    # Reusable card component
+├── routes/
+│   ├── +layout.svelte     # App layout
+│   └── +page.svelte       # Home page
+└── app.css               # Global styles
 ```
 
-## Developing
+## Customization
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+- Update project information in `src/components/Main.svelte`
+- Modify skills and levels in the skills section
+- Update social links in `src/components/Footer.svelte`
+- Customize colors and styling in `src/app.css`
 
-```bash
-npm run dev
+## License
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+MIT License - feel free to use this template for your own portfolio!
