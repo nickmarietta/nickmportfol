@@ -41,6 +41,6 @@
   </div>
   
   <div class="text-center text-gray-400 text-sm">
-    <p>&copy; 2024 Nicklaus Marietta. All rights reserved.</p>
+    <p>&copy; 2025 Nicklaus Marietta. All rights reserved.</p>
   </div>
 </footer>
