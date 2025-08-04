@@ -59,7 +59,7 @@
           an Aspiring <span class="text-blue-400">Software Engineer</span>
         </h1>
         <p class="text-lg sm:text-xl text-gray-300">
-          Senior at <span class="text-blue-400">CSUF</span> studying Computer Science. 
+          Senior at <span class="text-purple-400">CSUF</span> studying Computer Science. 
           My <span class="text-blue-400">favorite tech</span> includes JS (ReactJS, SvelteKit), C++, and Python.
         </p>
         <div class="flex flex-wrap gap-4">

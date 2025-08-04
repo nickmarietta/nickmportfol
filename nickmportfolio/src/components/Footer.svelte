@@ -1,6 +1,3 @@
-<script>
-  import CardBody from "./CardBody.svelte";
-</script>
 
 <footer class="py-20 sm:py-32 bg-slate-900 border-t border-slate-700 flex flex-col gap-8 justify-center items-center">
   <div class="text-center space-y-4">
