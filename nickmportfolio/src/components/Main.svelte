@@ -3,11 +3,13 @@
 
   // Reference the EcoNauts image from static assets
   const Econauts = "/assets/EcoNauts.png";
+  const Silverware = "/assets/Silverware.png";
+  const RedClarity = "/assets/RedClarity.png";
 
   let projects = [
     {
       name: "SilverWare",
-      icon: "fa-solid fa-utensils",
+      icon: Silverware,
       description: "A Web Application that is designed for restaurant owners to customize the layout of their store. Created with ReactJS, Django, AWS, SQLite.",
       link: "https://github.com/owendevita/Silverware",
       images: [
@@ -29,7 +31,7 @@
     },
     {
       name: "RedClarity",
-      icon: "fa-solid fa-futbol",
+      icon: RedClarity,
       description: "A sports management application for organizing team lineups and tracking player statistics.",
       link: "https://github.com/nickmarietta/lineuplist",
       images: [
@@ -43,15 +45,15 @@
   let aboutSections = [
     {
       title: "an aspiring software engineer",
-      description: "I have always been interested with technology in the CS field and love the process of building ideas. With the vast world of technology, I believe that continuous learning journey makes it very fun."
+      description: "i have always been interested with technology in the CS field and love the process of building ideas. With the vast world of technology, I believe that continuous learning journey makes it very fun."
     },
     {
       title: "a video game enthusiast", 
-      description: "Video games have always been my gateway into the world of technology. I see them as a powerful medium for creativity, storytelling, and innovation—bringing people's passions and ideas to life in an interactive way."
+      description: "video games have always been my gateway into the world of technology. I see them as a powerful medium for creativity, storytelling, and innovation—bringing people's passions and ideas to life in an interactive way."
     },
     {
       title: "a passionate learner",
-      description: "Learning new computer and spoken languages has been one of my favorite hobbies. I love the process because it shows how diverse and different the world can be in various aspects."
+      description: "learning new computer and spoken languages has been one of my favorite hobbies. I love the process because it shows how diverse and different the world can be in various aspects."
     }
   ];
 
@@ -63,7 +65,14 @@
     { name: "C++", level: 65 },
     { name: "Node.js", level: 70 },
     { name: "SQL", level: 75 },
-    { name: "Git", level: 80 }
+    { name: "Git", level: 80 },
+    { name: "Django", level: 70 },
+    { name: "AWS", level: 65 },
+    { name: "SQLite", level: 70 },
+    { name: "HTML", level: 80 },
+    { name: "CSS", level: 75 },
+    { name: "Tailwind", level: 70 },
+    { name: "Bootstrap", level: 65 },
   ];
 </script>
 
