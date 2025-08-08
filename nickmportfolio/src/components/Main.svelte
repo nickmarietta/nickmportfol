@@ -1,24 +1,42 @@
 <script>
-  import Step from "./Step.svelte";
+  import ProjectStep from "./ProjectStep.svelte";
+
+  // Reference the EcoNauts image from static assets
+  const Econauts = "/assets/EcoNauts.png";
 
   let projects = [
     {
       name: "SilverWare",
       icon: "fa-solid fa-utensils",
-      description: "SilverWare is a web application that is designed for restaurant owners to customize the layout of their store. Created with ReactJS, Django, AWS, SQLite.",
-      link: "https://github.com/owendevita/Silverware"
+      description: "A Web Application that is designed for restaurant owners to customize the layout of their store. Created with ReactJS, Django, AWS, SQLite.",
+      link: "https://github.com/owendevita/Silverware",
+      images: [
+        "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=400&h=300&fit=crop",
+        "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400&h=300&fit=crop",
+        "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&h=300&fit=crop"
+      ]
     },
     {
-      name: "The Aprendizaje",
-      icon: "fa-solid fa-earth-americas", 
+      name: "EcoNauts",
+      icon: Econauts,
       description: "A language learning platform that helps users master new languages through interactive lessons and real-world practice.",
-      link: "https://github.com/nickmarietta/aprendizaje"
+      link: "https://github.com/nickmarietta/GreenPlacement",
+      images: [
+        "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=400&h=300&fit=crop",
+        "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400&h=300&fit=crop",
+        "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=400&h=300&fit=crop"
+      ]
     },
     {
-      name: "LineupList",
+      name: "RedClarity",
       icon: "fa-solid fa-futbol",
       description: "A sports management application for organizing team lineups and tracking player statistics.",
-      link: "https://github.com/nickmarietta/lineuplist"
+      link: "https://github.com/nickmarietta/lineuplist",
+      images: [
+        "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop",
+        "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=400&h=300&fit=crop",
+        "https://images.unsplash.com/photo-1517466787929-bc90951d0974?w=400&h=300&fit=crop"
+      ]
     }
   ];
 
@@ -59,7 +77,7 @@
           an Aspiring <span class="text-blue-400">Software Engineer</span>
         </h1>
         <p class="text-lg sm:text-xl text-gray-300">
-          Senior at <span class="text-purple-400">CSUF</span> studying Computer Science. 
+          Senior at <span class="text-blue-400">CSUF</span> studying Computer Science. 
           My <span class="text-blue-400">favorite tech</span> includes JS (ReactJS, SvelteKit), C++, and Python.
         </p>
         <div class="flex flex-wrap gap-4">
@@ -100,7 +118,7 @@
     
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
       {#each projects as project}
-        <Step project={project} />
+        <ProjectStep project={project} />
       {/each}
     </div>
   </section>
@@ -111,7 +129,6 @@
       <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
         A bit <span class="text-blue-400">about</span> me
       </h2>
-      <p class="text-lg text-gray-300">Want to know more?</p>
     </div>
     
     <div class="max-w-4xl mx-auto space-y-12">

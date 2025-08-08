@@ -2,7 +2,7 @@
 <footer class="py-20 sm:py-32 bg-slate-900 border-t border-slate-700 flex flex-col gap-8 justify-center items-center">
   <div class="text-center space-y-4">
     <h3 class="text-2xl font-bold text-white">Let's Connect!</h3>
-    <p class="text-gray-300">Feel free to reach out for collaborations or just to say hello.</p>
+    <p class="text-gray-300">Feel free to reach out for collaborations or just to say hi!</p>
   </div>
   
   <div class="flex gap-6">
