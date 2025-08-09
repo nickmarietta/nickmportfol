@@ -1,5 +1,8 @@
 <script>
   import ProjectStep from "./ProjectStep.svelte";
+  import Skills from "./Skills.svelte";
+
+  import Icon from "@iconify/svelte";
 
   // Reference the EcoNauts image from static assets
   const Econauts = "/assets/EcoNauts.png";
@@ -161,27 +164,43 @@
 
   <!-- Skills Section -->
   <section class="container mx-auto px-4 py-20">
-    <div class="text-center mb-16">
-      <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
-        My <span class="text-blue-400">Skills</span>
-      </h2>
-    </div>
+  <div class="text-center mb-16">
+    <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
+      My <span class="text-blue-400">Skills</span>
+    </h2>
+  </div>
+
+  <div class="relative flex h-[500px] w-full items-center justify-center">
+
+    <!-- Orbiting icons -->
+    <Skills radius={80} duration={20} className="h-[30px] w-[30px] border-none bg-transparent">
+      <Icon icon="skill-icons:github-dark" width="30" height="30" />
+    </Skills>
+
+    <Skills radius={80} duration={20} delay={-10} className="h-[30px] w-[30px] border-none bg-transparent">
+      <!-- Supabase SVG logo, sized smaller -->
+      <Icon icon="skill-icons:aws-dark" width="30" height="30" />
+    </Skills>
+
+    <Skills radius={160} duration={20} reverse className="h-[45px] w-[45px] border-none bg-transparent">
+      <!-- Svelte SVG logo -->
+      <Icon icon="skill-icons:svelte" width="30" height="30" />
+    </Skills>
     
-    <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-      {#each skills as skill}
-        <div class="space-y-2">
-          <div class="flex justify-between items-center">
-            <span class="font-medium">{skill.name}</span>
-            <span class="text-sm text-gray-400">{skill.level}%</span>
-          </div>
-          <div class="w-full bg-gray-700 rounded-full h-2">
-            <div 
-              class="bg-gradient-to-r from-blue-500 to-purple-600 h-2 rounded-full transition-all duration-1000"
-              style="width: {skill.level}%"
-            ></div>
-          </div>
-        </div>
-      {/each}
-    </div>
-  </section>
+    <Skills radius={160} duration={20} delay={-10} reverse className="h-[45px] w-[45px] border-none bg-transparent">
+      <!-- Github SVG logo -->
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="45"
+        height="45"
+        viewBox="0 0 256 250"
+        fill="currentColor"
+        preserveAspectRatio="xMidYMid"
+      >
+        <!-- SVG paths here -->
+      </svg>
+    </Skills>
+
+  </div>
+</section>
 </main>
