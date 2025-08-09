@@ -5,6 +5,7 @@
   const Econauts = "/assets/EcoNauts.png";
   const Silverware = "/assets/Silverware.png";
   const RedClarity = "/assets/RedClarity.png";
+  const NickPfp = "/assets/nick2ndpfp.jpg";
 
   let projects = [
     {
@@ -71,8 +72,7 @@
     { name: "SQLite", level: 70 },
     { name: "HTML", level: 80 },
     { name: "CSS", level: 75 },
-    { name: "Tailwind", level: 70 },
-    { name: "Bootstrap", level: 65 },
+    { name: "Tailwind", level: 70 }
   ];
 </script>
 
@@ -107,8 +107,8 @@
         </div>
       </div>
       <div class="flex justify-center lg:justify-end">
-        <div class="w-64 h-64 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-6xl text-white">
-          <i class="fa-solid fa-code"></i>
+        <div class="w-100 h-100 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-6xl text-white">
+          <img src={NickPfp} alt="Nick" class="w-full h-full object-cover rounded-full">
         </div>
       </div>
     </div>
