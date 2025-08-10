@@ -4,7 +4,7 @@
   export let reverse = false;
   export let duration = 20;
   export let delay = 0;
-  export let radius = 10
+  export let radius = 10;
   export let path = true;
 </script>
 
@@ -15,7 +15,7 @@
     class="pointer-events-none absolute inset-0 h-full w-full"
   >
     <circle
-      class="stroke-black/10 stroke-1 dark:stroke-white/10"
+      class="stroke-gray-600/20 stroke-1"
       cx="50%"
       cy="50%"
       r={radius}
@@ -23,16 +23,37 @@
       stroke-dasharray="4 4"
     />
   </svg>
-    <div
-    style:--delay={delay}
-    style:--duration={duration}
-    style:--radius={radius}
+  <div
     class={cn(
-        "absolute flex h-[100px] w-[100px] transform-gpu animate-orbit items-center justify-center rounded-full border bg-black/10 [animation-delay:calc(var(--delay)*1000ms)] dark:bg-white/10",
-        { "[animation-direction:reverse]": reverse },
-        className
+      "absolute flex items-center justify-center rounded-full",
+      "h-16 w-16",
+      className
     )}
-    >
+    style="
+      left: 50%;
+      top: 50%;
+      margin-left: -8px;
+      margin-top: -8px;
+      --radius: {radius}px;
+      --duration: {duration}s;
+      --delay: {delay}s;
+      animation: orbit var(--duration) linear infinite;
+      animation-delay: var(--delay);
+      animation-direction: {reverse ? 'reverse' : 'normal'};
+      transform-origin: center;
+    "
+  >
     <slot></slot>
-    </div>
+  </div>
 {/if}
+
+<style>
+  @keyframes orbit {
+    0% {
+      transform: rotate(0deg) translateX(var(--radius)) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translateX(var(--radius)) rotate(-360deg);
+    }
+  }
+</style>

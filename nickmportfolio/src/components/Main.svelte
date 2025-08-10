@@ -164,43 +164,44 @@
 
   <!-- Skills Section -->
   <section class="container mx-auto px-4 py-20">
-  <div class="text-center mb-16">
-    <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
-      My <span class="text-blue-400">Skills</span>
-    </h2>
-  </div>
+    <div class="text-center mb-16">
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
+        My <span class="text-blue-400">Skills</span>
+      </h2>
+    </div>
 
-  <div class="relative flex h-[500px] w-full items-center justify-center">
+    <div class="relative h-[600px] w-full flex items-center justify-center border border-red-500">
+      <!-- Center icon -->
+      <div class="absolute z-10 flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-br from-blue-500 to-purple-600">
+        <Icon icon="skill-icons:javascript" width="40" height="40" class="text-white" />
+      </div>
 
-    <!-- Orbiting icons -->
-    <Skills radius={80} duration={20} className="h-[30px] w-[30px] border-none bg-transparent">
-      <Icon icon="skill-icons:github-dark" width="30" height="30" />
-    </Skills>
+      <!-- Orbiting icons -->
+      <div class="absolute inset-0">
+        <Skills radius={80} duration={30} className="h-16 w-16 border border-blue-500">
+          <Icon icon="skill-icons:react-dark" width="32" height="32" />
+        </Skills>
 
-    <Skills radius={80} duration={20} delay={-10} className="h-[30px] w-[30px] border-none bg-transparent">
-      <!-- Supabase SVG logo, sized smaller -->
-      <Icon icon="skill-icons:aws-dark" width="30" height="30" />
-    </Skills>
+        <Skills radius={80} duration={30} delay={-15} className="h-16 w-16 border border-green-500">
+          <Icon icon="skill-icons:svelte" width="32" height="32" />
+        </Skills>
 
-    <Skills radius={160} duration={20} reverse className="h-[45px] w-[45px] border-none bg-transparent">
-      <!-- Svelte SVG logo -->
-      <Icon icon="skill-icons:svelte" width="30" height="30" />
-    </Skills>
-    
-    <Skills radius={160} duration={20} delay={-10} reverse className="h-[45px] w-[45px] border-none bg-transparent">
-      <!-- Github SVG logo -->
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="45"
-        height="45"
-        viewBox="0 0 256 250"
-        fill="currentColor"
-        preserveAspectRatio="xMidYMid"
-      >
-        <!-- SVG paths here -->
-      </svg>
-    </Skills>
+        <Skills radius={140} duration={40} reverse className="h-16 w-16 border border-yellow-500">
+          <Icon icon="skill-icons:python-dark" width="32" height="32" />
+        </Skills>
+        
+        <Skills radius={140} duration={40} delay={-20} reverse className="h-16 w-16 border border-purple-500">
+          <Icon icon="skill-icons:cpp" width="32" height="32" />
+        </Skills>
 
-  </div>
-</section>
+        <Skills radius={200} duration={50} className="h-16 w-16 border border-pink-500">
+          <Icon icon="skill-icons:nodejs-dark" width="32" height="32" />
+        </Skills>
+
+        <Skills radius={200} duration={50} delay={-25} className="h-16 w-16 border border-orange-500">
+          <Icon icon="skill-icons:aws-dark" width="32" height="32" />
+        </Skills>
+      </div>
+    </div>
+  </section>
 </main>
