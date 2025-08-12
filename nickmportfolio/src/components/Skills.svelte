@@ -1,11 +1,54 @@
 <script>
   import { cn } from "$lib/utils";
+  import { onMount, onDestroy } from "svelte";
+  
   export let className = "";
   export let reverse = false;
   export let duration = 20;
   export let delay = 0;
   export let radius = 10;
   export let path = true;
+  export let url = "";
+  
+  let element;
+  let animationId;
+  let startTime;
+  
+  function handleClick() {
+    if (url) {
+      window.open(url, '_blank', 'noopener,noreferrer');
+    }
+  }
+  
+  onMount(() => {
+    startTime = Date.now() + (delay * 1000);
+    
+    function animate() {
+      const now = Date.now();
+      const elapsed = (now - startTime) / 1000;
+      const progress = (elapsed % duration) / duration;
+      
+      const angle = reverse ? -360 * progress : 360 * progress;
+      const radians = (angle * Math.PI) / 180;
+      
+      const x = Math.cos(radians) * radius;
+      const y = Math.sin(radians) * radius;
+      
+      if (element) {
+        element.style.transform = `translate(${x}px, ${y}px)`;
+      }
+      
+      animationId = requestAnimationFrame(animate);
+    }
+    
+    animate();
+  });
+  
+  onDestroy(() => {
+    if (animationId) {
+      cancelAnimationFrame(animationId);
+    }
+  });
 </script>
 
 {#if path}
@@ -24,36 +67,27 @@
     />
   </svg>
   <div
+    bind:this={element}
     class={cn(
-      "absolute flex items-center justify-center rounded-full",
+      "absolute flex items-center justify-center rounded-full transition-transform duration-100",
       "h-16 w-16",
+      url ? "cursor-pointer hover:scale-110 transition-transform" : "",
       className
     )}
     style="
-      left: 50%;
-      top: 50%;
-      margin-left: -8px;
-      margin-top: -8px;
-      --radius: {radius}px;
-      --duration: {duration}s;
-      --delay: {delay}s;
-      animation: orbit var(--duration) linear infinite;
-      animation-delay: var(--delay);
-      animation-direction: {reverse ? 'reverse' : 'normal'};
-      transform-origin: center;
+      left: calc(50% - 8px);
+      top: calc(50% - 8px);
     "
+    on:click={handleClick}
+    role={url ? "button" : undefined}
+    tabindex={url ? "0" : undefined}
+    on:keydown={(e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        handleClick();
+      }
+    }}
   >
     <slot></slot>
   </div>
 {/if}
-
-<style>
-  @keyframes orbit {
-    0% {
-      transform: rotate(0deg) translateX(var(--radius)) rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg) translateX(var(--radius)) rotate(-360deg);
-    }
-  }
-</style>

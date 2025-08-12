@@ -170,37 +170,109 @@
       </h2>
     </div>
 
-    <div class="relative h-[600px] w-full flex items-center justify-center border border-red-500">
+    <div class="relative h-[600px] w-full flex items-center justify-center">
       <!-- Center icon -->
-      <div class="absolute z-10 flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-br from-blue-500 to-purple-600">
-        <Icon icon="skill-icons:javascript" width="40" height="40" class="text-white" />
+      <div class="absolute z-10 flex h-20 w-20 items-center justify-center rounded-full">
+        <Icon icon="skill-icons:codemeta" width="40" height="40" class="text-white" />
       </div>
 
-      <!-- Orbiting icons -->
-      <div class="absolute inset-0">
-        <Skills radius={80} duration={30} className="h-16 w-16 border border-blue-500">
-          <Icon icon="skill-icons:react-dark" width="32" height="32" />
-        </Skills>
+      <!-- Frontend Technologies (Inner Ring) -->
+      <Skills radius={80} duration={25} className="h-16 w-16" url="https://react.dev/">
+        <Icon icon="skill-icons:react-dark" width="32" height="32" />
+      </Skills>
 
-        <Skills radius={80} duration={30} delay={-15} className="h-16 w-16 border border-green-500">
-          <Icon icon="skill-icons:svelte" width="32" height="32" />
-        </Skills>
+      <Skills radius={80} duration={25} delay={-6} className="h-16 w-16" url="https://svelte.dev/">
+        <Icon icon="skill-icons:svelte" width="32" height="32" />
+      </Skills>
 
-        <Skills radius={140} duration={40} reverse className="h-16 w-16 border border-yellow-500">
-          <Icon icon="skill-icons:python-dark" width="32" height="32" />
-        </Skills>
-        
-        <Skills radius={140} duration={40} delay={-20} reverse className="h-16 w-16 border border-purple-500">
-          <Icon icon="skill-icons:cpp" width="32" height="32" />
-        </Skills>
+      <Skills radius={80} duration={25} delay={-12} className="h-16 w-16" url="https://www.typescriptlang.org/">
+        <Icon icon="skill-icons:typescript" width="32" height="32" />
+      </Skills>
 
-        <Skills radius={200} duration={50} className="h-16 w-16 border border-pink-500">
-          <Icon icon="skill-icons:nodejs-dark" width="32" height="32" />
-        </Skills>
+      <Skills radius={80} duration={25} delay={-18} className="h-16 w-16" url="https://developer.mozilla.org/en-US/docs/Web/HTML">
+        <Icon icon="skill-icons:html5" width="32" height="32" />
+      </Skills>
 
-        <Skills radius={200} duration={50} delay={-25} className="h-16 w-16 border border-orange-500">
-          <Icon icon="skill-icons:aws-dark" width="32" height="32" />
-        </Skills>
+      <Skills radius={80} duration={25} delay={-24} className="h-16 w-16" url="https://developer.mozilla.org/en-US/docs/Web/CSS">
+        <Icon icon="skill-icons:css3" width="32" height="32" />
+      </Skills>
+
+      <!-- Backend Technologies (Middle Ring) -->
+      <Skills radius={160} duration={35} reverse className="h-16 w-16" url="https://www.python.org/">
+        <Icon icon="skill-icons:python-dark" width="32" height="32" />
+      </Skills>
+
+      <Skills radius={160} duration={35} delay={-7} reverse className="h-16 w-16" url="https://isocpp.org/">
+        <Icon icon="skill-icons:cpp" width="32" height="32" />
+      </Skills>
+
+      <Skills radius={160} duration={35} delay={-14} reverse className="h-16 w-16" url="https://www.oracle.com/java/">
+        <Icon icon="skill-icons:java" width="32" height="32" />
+      </Skills>
+
+      <Skills radius={160} duration={35} delay={-21} reverse className="h-16 w-16" url="https://nodejs.org/">
+        <Icon icon="skill-icons:nodejs-dark" width="32" height="32" />
+      </Skills>
+
+      <Skills radius={160} duration={35} delay={-28} reverse className="h-16 w-16" url="https://flask.palletsprojects.com/">
+        <Icon icon="skill-icons:flask" width="32" height="32" />
+      </Skills>
+
+      <Skills radius={160} duration={35} delay={-35} reverse className="h-16 w-16" url="https://www.mysql.com/">
+        <Icon icon="skill-icons:mysql-dark" width="32" height="32" />
+      </Skills>
+
+      <Skills radius={160} duration={35} delay={-42} reverse className="h-16 w-16" url="https://www.postgresql.org/">
+        <Icon icon="skill-icons:postgresql-dark" width="32" height="32" />
+      </Skills>
+
+      <!-- Developer Tools (Outer Ring) -->
+      <Skills radius={240} duration={45} className="h-16 w-16" url="https://git-scm.com/">
+        <Icon icon="skill-icons:git" width="32" height="32" />
+      </Skills>
+
+      <Skills radius={240} duration={45} delay={-8} className="h-16 w-16" url="https://aws.amazon.com/">
+        <Icon icon="skill-icons:aws-dark" width="32" height="32" />
+      </Skills>
+
+      <Skills radius={240} duration={45} delay={-16} className="h-16 w-16" url="https://firebase.google.com/">
+        <Icon icon="skill-icons:firebase" width="32" height="32" />
+      </Skills>
+
+      <Skills radius={240} duration={45} delay={-24} className="h-16 w-16" url="https://cloud.google.com/">
+        <Icon icon="skill-icons:googlecloud" width="32" height="32" />
+      </Skills>
+
+      <Skills radius={240} duration={45} delay={-32} className="h-16 w-16" url="https://www.mongodb.com/">
+        <Icon icon="skill-icons:mongodb" width="32" height="32" />
+      </Skills>
+
+      <Skills radius={240} duration={45} delay={-40} className="h-16 w-16" url="https://www.docker.com/">
+        <Icon icon="skill-icons:docker" width="32" height="32" />
+      </Skills>
+    </div>
+
+    <!-- Skills Legend -->
+    <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+      <div class="space-y-4">
+        <h3 class="text-xl font-semibold text-blue-400">Frontend</h3>
+        <div class="flex flex-wrap justify-center gap-2 text-sm text-gray-300">
+          <span>React</span> • <span>Svelte</span> • <span>TypeScript</span> • <span>HTML/CSS</span>
+        </div>
+      </div>
+      
+      <div class="space-y-4">
+        <h3 class="text-xl font-semibold text-blue-400">Backend</h3>
+        <div class="flex flex-wrap justify-center gap-2 text-sm text-gray-300">
+          <span>Python</span> • <span>C++</span> • <span>Java</span> • <span>Node.js</span> • <span>Flask</span> • <span>SQL</span>
+        </div>
+      </div>
+      
+      <div class="space-y-4">
+        <h3 class="text-xl font-semibold text-blue-400">Developer Tools</h3>
+        <div class="flex flex-wrap justify-center gap-2 text-sm text-gray-300">
+          <span>Git</span> • <span>AWS</span> • <span>Firebase</span> • <span>GCP</span> • <span>MongoDB</span> • <span>Docker</span>
+        </div>
       </div>
     </div>
   </section>
