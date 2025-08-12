@@ -181,19 +181,19 @@
         <Icon icon="skill-icons:react-dark" width="32" height="32" />
       </Skills>
 
-      <Skills radius={80} duration={25} delay={-6} className="h-16 w-16" url="https://svelte.dev/">
+      <Skills radius={80} duration={25} delay={-5} className="h-16 w-16" url="https://svelte.dev/">
         <Icon icon="skill-icons:svelte" width="32" height="32" />
       </Skills>
 
-      <Skills radius={80} duration={25} delay={-12} className="h-16 w-16" url="https://www.typescriptlang.org/">
+      <Skills radius={80} duration={25} delay={-10} className="h-16 w-16" url="https://www.typescriptlang.org/">
         <Icon icon="skill-icons:typescript" width="32" height="32" />
       </Skills>
 
-      <Skills radius={80} duration={25} delay={-18} className="h-16 w-16" url="https://developer.mozilla.org/en-US/docs/Web/HTML">
+      <Skills radius={80} duration={25} delay={-15} className="h-16 w-16" url="https://developer.mozilla.org/en-US/docs/Web/HTML">
         <Icon icon="skill-icons:html5" width="32" height="32" />
       </Skills>
 
-      <Skills radius={80} duration={25} delay={-24} className="h-16 w-16" url="https://developer.mozilla.org/en-US/docs/Web/CSS">
+      <Skills radius={80} duration={25} delay={-20} className="h-16 w-16" url="https://developer.mozilla.org/en-US/docs/Web/CSS">
         <Icon icon="skill-icons:css3" width="32" height="32" />
       </Skills>
 
@@ -202,27 +202,27 @@
         <Icon icon="skill-icons:python-dark" width="32" height="32" />
       </Skills>
 
-      <Skills radius={160} duration={35} delay={-7} reverse className="h-16 w-16" url="https://isocpp.org/">
+      <Skills radius={160} duration={35} delay={-5} reverse className="h-16 w-16" url="https://isocpp.org/">
         <Icon icon="skill-icons:cpp" width="32" height="32" />
       </Skills>
 
-      <Skills radius={160} duration={35} delay={-14} reverse className="h-16 w-16" url="https://www.oracle.com/java/">
+      <Skills radius={160} duration={35} delay={-10} reverse className="h-16 w-16" url="https://www.oracle.com/java/">
         <Icon icon="skill-icons:java" width="32" height="32" />
       </Skills>
 
-      <Skills radius={160} duration={35} delay={-21} reverse className="h-16 w-16" url="https://nodejs.org/">
+      <Skills radius={160} duration={35} delay={-15} reverse className="h-16 w-16" url="https://nodejs.org/">
         <Icon icon="skill-icons:nodejs-dark" width="32" height="32" />
       </Skills>
 
-      <Skills radius={160} duration={35} delay={-28} reverse className="h-16 w-16" url="https://flask.palletsprojects.com/">
+      <Skills radius={160} duration={35} delay={-20} reverse className="h-16 w-16" url="https://flask.palletsprojects.com/">
         <Icon icon="skill-icons:flask" width="32" height="32" />
       </Skills>
 
-      <Skills radius={160} duration={35} delay={-35} reverse className="h-16 w-16" url="https://www.mysql.com/">
+      <Skills radius={160} duration={35} delay={-25} reverse className="h-16 w-16" url="https://www.mysql.com/">
         <Icon icon="skill-icons:mysql-dark" width="32" height="32" />
       </Skills>
 
-      <Skills radius={160} duration={35} delay={-42} reverse className="h-16 w-16" url="https://www.postgresql.org/">
+      <Skills radius={160} duration={35} delay={-30} reverse className="h-16 w-16" url="https://www.postgresql.org/">
         <Icon icon="skill-icons:postgresql-dark" width="32" height="32" />
       </Skills>
 
@@ -231,23 +231,23 @@
         <Icon icon="skill-icons:git" width="32" height="32" />
       </Skills>
 
-      <Skills radius={240} duration={45} delay={-8} className="h-16 w-16" url="https://aws.amazon.com/">
+      <Skills radius={240} duration={45} delay={-7.5} className="h-16 w-16" url="https://aws.amazon.com/">
         <Icon icon="skill-icons:aws-dark" width="32" height="32" />
       </Skills>
 
-      <Skills radius={240} duration={45} delay={-16} className="h-16 w-16" url="https://firebase.google.com/">
+      <Skills radius={240} duration={45} delay={-15} className="h-16 w-16" url="https://firebase.google.com/">
         <Icon icon="skill-icons:firebase" width="32" height="32" />
       </Skills>
 
-      <Skills radius={240} duration={45} delay={-24} className="h-16 w-16" url="https://cloud.google.com/">
+      <Skills radius={240} duration={45} delay={-22.5} className="h-16 w-16" url="https://cloud.google.com/">
         <Icon icon="skill-icons:googlecloud" width="32" height="32" />
       </Skills>
 
-      <Skills radius={240} duration={45} delay={-32} className="h-16 w-16" url="https://www.mongodb.com/">
+      <Skills radius={240} duration={45} delay={-30} className="h-16 w-16" url="https://www.mongodb.com/">
         <Icon icon="skill-icons:mongodb" width="32" height="32" />
       </Skills>
 
-      <Skills radius={240} duration={45} delay={-40} className="h-16 w-16" url="https://www.docker.com/">
+      <Skills radius={240} duration={45} delay={-37.5} className="h-16 w-16" url="https://www.docker.com/">
         <Icon icon="skill-icons:docker" width="32" height="32" />
       </Skills>
     </div>
