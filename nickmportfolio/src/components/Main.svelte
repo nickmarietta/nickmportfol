@@ -123,9 +123,6 @@
       <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
         My <span class="text-blue-400">Projects</span>
       </h2>
-      <p class="text-lg text-gray-300">
-        A few of my projects that I have worked on.
-      </p>
     </div>
     
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">

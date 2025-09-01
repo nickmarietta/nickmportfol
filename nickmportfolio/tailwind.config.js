@@ -1,8 +1,5 @@
-
 export default {
-  content: [
-    "./src/**/*.{html,js,svelte,ts}",
-  ],
+  content: ["./src/**/*.{html,js,svelte,ts}"],
   theme: {
     extend: {
       colors: {
@@ -11,6 +8,9 @@ export default {
         light: "#033C68",
         medium: "#043051",
         "second-dark": "#0C1C29",
+      },
+      fontFamily: {
+        oxanium: ["Oxanium", "sans-serif"],
       },
     },
   },
