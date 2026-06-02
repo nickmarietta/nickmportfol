@@ -3,14 +3,18 @@
   import Skills from "./Skills.svelte";
 
   import Icon from "@iconify/svelte";
+  import ExperienceCard from "../lib/components/ExperienceCard.svelte";
 
-  // Reference the EcoNauts image from static assets
+  // Reference the Econauts image from static assets
   const Econauts = "/assets/EcoNauts.png";
   const Silverware = "/assets/Silverware.png";
   const RedClarity = "/assets/RedClarity.png";
   const NickPfp = "/assets/nick2ndpfp.jpg";
 
-  let projects = [
+  // Data-driven: allow external JSON (through page load) to supply projects
+  export let projects = [];
+  // Local fallback data for MVP compatibility
+  const localProjects = [
     {
       name: "SilverWare",
       icon: Silverware,
@@ -25,7 +29,7 @@
     {
       name: "EcoNauts",
       icon: Econauts,
-      description: "A language learning platform that helps users master new languages through interactive lessons and real-world practice.",
+      description: "An environmental placement platform connecting students with green internships and sustainability-focused organizations.",
       link: "https://github.com/nickmarietta/GreenPlacement",
       images: [
         "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=400&h=300&fit=crop",
@@ -46,6 +50,9 @@
     }
   ];
 
+  // Publicly exposed data-driven array; prefers loaded data if provided
+  $: displayProjects = (projects && projects.length) ? projects : localProjects;
+
   let aboutSections = [
     {
       title: "an aspiring software engineer",
@@ -61,22 +68,9 @@
     }
   ];
 
-  let skills = [
-    { name: "JavaScript", level: 85 },
-    { name: "React", level: 80 },
-    { name: "Svelte", level: 75 },
-    { name: "Python", level: 70 },
-    { name: "C++", level: 65 },
-    { name: "Node.js", level: 70 },
-    { name: "SQL", level: 75 },
-    { name: "Git", level: 80 },
-    { name: "Django", level: 70 },
-    { name: "AWS", level: 65 },
-    { name: "SQLite", level: 70 },
-    { name: "HTML", level: 80 },
-    { name: "CSS", level: 75 },
-    { name: "Tailwind", level: 70 }
-  ];
+  // Experiences data (wired from JSON when provided)
+  export let experiences = [];
+  $: displayExperiences = (experiences && experiences.length) ? experiences : [];
 </script>
 
 <main class="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
@@ -126,11 +120,25 @@
     </div>
     
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-      {#each projects as project}
+      {#each displayProjects as project}
         <ProjectStep project={project} />
       {/each}
     </div>
   </section>
+
+  {#if displayExperiences?.length}
+  <!-- Experiences Section -->
+  <section class="container mx-auto px-4 py-20">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">Experience</h2>
+    </div>
+    <div class="flex flex-col gap-4">
+      {#each displayExperiences as exp}
+        <ExperienceCard item={exp} />
+      {/each}
+    </div>
+  </section>
+  {/if}
 
   <!-- About Section -->
   <section class="container mx-auto px-4 py-20">

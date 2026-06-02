@@ -31,3 +31,28 @@
 </div>
 
 <svelte:window bind:scrollY={y} bind:innerHeight bind:innerWidth />
+
+<svelte:head>
+  <title>Nicklaus Marietta — Software Engineer</title>
+  <meta name="description" content="Portfolio of Nicklaus Marietta, a software engineer focusing on frontend, UI/UX, and web performance." />
+  <meta property="og:title" content="Nicklaus Marietta — Software Engineer" />
+  <meta property="og:description" content="Portfolio of a software engineer building accessible, fast, and delightful web experiences." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/assets/nick2ndpfp.jpg" />
+  <meta property="og:url" content="https://nickmarietta.vercel.app" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Nicklaus Marietta",
+    "url": "https://nickmarietta.vercel.app",
+    "sameAs": [
+      "https://www.linkedin.com/in/nicklaus-marietta/",
+      "https://github.com/nickmarietta"
+    ],
+    "image": "/assets/nick2ndpfp.jpg",
+    "jobTitle": "Software Engineer",
+    "description": "Frontend-focused developer with a passion for design systems, accessibility, and performance."
+  }
+  </script>
+</svelte:head>

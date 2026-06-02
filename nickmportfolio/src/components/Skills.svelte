@@ -75,8 +75,8 @@
       className
     )}
     style="
-      left: calc(50% - 8px);
-      top: calc(50% - 8px);
+      left: calc(50% - 32px);
+      top: calc(50% - 32px);
     "
     on:click={handleClick}
     role={url ? "button" : undefined}
