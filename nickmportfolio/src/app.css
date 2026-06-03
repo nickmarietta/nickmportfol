@@ -317,6 +317,8 @@ a { color: inherit; text-decoration: none; }
 .proj .plinks a { color: var(--accent); display: inline-flex; align-items: center; gap: 6px; transition: gap .2s; }
 .proj .plinks a:hover { gap: 10px; }
 
+.proj-browse { margin-top: 48px; text-align: center; }
+
 /* ---------- skills ---------- */
 .skills-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; }
 .skill-card { border: 1px solid var(--line); border-radius: 16px; padding: 28px; background: var(--card); }

@@ -9,7 +9,7 @@
     const ctx = canvas.getContext('2d');
 
     let W, H, dpr, nodes = [], pulses = [];
-    const CONFIG = { density: 0.00010, linkDist: 170, speed: 0.18 };
+    const CONFIG = { density: 0.00010, linkDist: 170, speed: 0.45 };
 
     let COL_NODE, COL_LINE, COL_PULSE;
     function readColors() {

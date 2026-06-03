@@ -1,36 +1,6 @@
 <script>
   import { onMount } from 'svelte';
-
-  const Silverware = '/assets/Silverware.png';
-  const Econauts   = '/assets/EcoNauts.png';
-  const RedClarity = '/assets/RedClarity.png';
-
-  const projects = [
-    {
-      num: '01 / featured',
-      title: 'SilverWare',
-      img: Silverware,
-      desc: 'A web application for restaurant owners to customize their store layout and manage operations. Built with a full-stack React + Django architecture deployed on AWS.',
-      tags: ['ReactJS', 'Django', 'AWS', 'SQLite'],
-      links: [{ label: '↗ Code', href: 'https://github.com/owendevita/Silverware' }]
-    },
-    {
-      num: '02 / featured',
-      title: 'EcoNauts',
-      img: Econauts,
-      desc: 'An environmental placement platform connecting students with green internships and sustainability-focused organizations. Streamlines discovery and application.',
-      tags: ['React', 'Python', 'REST API', 'PostgreSQL'],
-      links: [{ label: '↗ Code', href: 'https://github.com/nickmarietta/GreenPlacement' }]
-    },
-    {
-      num: '03',
-      title: 'RedClarity',
-      img: RedClarity,
-      desc: 'A sports management application for organizing team lineups, tracking player statistics, and coordinating roster decisions across a full season.',
-      tags: ['React', 'Node.js', 'MongoDB', 'Express'],
-      links: [{ label: '↗ Code', href: 'https://github.com/nickmarietta/lineuplist' }]
-    }
-  ];
+  import { projects } from '$lib/projects.js';
 
   onMount(() => {
     document.documentElement.classList.add('js-ready');
@@ -165,12 +135,16 @@
           <p class="desc">{proj.desc}</p>
           <div class="tags">{#each proj.tags as tag}<span>{tag}</span>{/each}</div>
           <div class="plinks">
+            <a href="/projects/{proj.slug}">↗ Details</a>
             {#each proj.links as link}
               <a href={link.href} target="_blank" rel="noopener">{link.label}</a>
             {/each}
           </div>
         </article>
       {/each}
+    </div>
+    <div class="proj-browse reveal">
+      <a href="/projects" class="btn ghost">Browse all projects →</a>
     </div>
   </div>
 </section>
