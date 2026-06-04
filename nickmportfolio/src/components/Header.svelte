@@ -27,7 +27,7 @@
 </script>
 
 <nav class="topnav" class:scrolled>
-  <a class="brand" href="#top">
+  <a class="brand" href="#top" on:click={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
     <span class="mark">NM</span>Nicklaus Marietta
   </a>
 
@@ -49,11 +49,11 @@
         <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path>
       </svg>
     </button>
-    <a class="btn primary" href="/resume.pdf" download aria-label="Download résumé PDF">
+    <a class="btn primary" href="/resume.pdf" download aria-label="Download resume PDF">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
         <path d="M12 3v12M7 11l5 4 5-4M5 21h14"></path>
       </svg>
-      Résumé
+      Resume
     </a>
   </div>
 </nav>

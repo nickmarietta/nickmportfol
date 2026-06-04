@@ -95,21 +95,19 @@
 <section class="section" id="about">
   <div class="wrap">
     <div class="sec-head reveal">
-      <div class="layer-tag"><span class="dot"></span> Layer 00 · Input <span class="ln"></span></div>
       <h2>About</h2>
-      <div class="sub">Where the signal starts.</div>
     </div>
     <div class="about-grid">
       <div class="about-body reveal d1">
-        <p class="lead">I'm a Computer Science senior at Cal State Fullerton with a passion for the full process of building — ideation, design, and shipping products that work.</p>
-        <p>My favorite technologies span the stack: React and SvelteKit on the front end, Python and Node.js on the back, and cloud infra on AWS, Firebase, and GCP. I care about writing clean, maintainable code as much as the end result.</p>
-        <p>Outside of code, video games have always been my gateway into technology — I see them as a powerful medium for creativity and storytelling. That curiosity spills into learning new languages, frameworks, and anything else that keeps the craft interesting.</p>
+        <p class="lead">I'm a recent graduate from Cal State Fullerton with a passion for the full process of building — ideation, design, and shipping products that work.</p>
+        <p>My favorite technologies include: React for the front end, Python for backend development, and cloud infrastructure on AWS and GCP.</p>
+        <p>Outside of technology and coding, I enjoy playing soccer, learning new languages, and spending time with my family.</p>
       </div>
       <div class="about-aside reveal d2">
         <div class="stats">
-          <div class="stat"><div class="num">Senior</div><div class="lbl">CS @ CSUF</div></div>
-          <div class="stat"><div class="num">3+</div><div class="lbl">Projects shipped</div></div>
-          <div class="stat"><div class="num">∞</div><div class="lbl">Curiosity</div></div>
+          <div class="stat"><div class="num">CSUF Alumnus</div><div class="lbl">BS in Computer Science</div></div>
+          <div class="stat"><div class="num">Manchester City</div><div class="lbl">Favorite Soccer Team</div></div>
+          <div class="stat"><div class="num">Natural Language Processing</div><div class="lbl">Favorite Subject</div></div>
         </div>
       </div>
     </div>
@@ -120,12 +118,12 @@
 <section class="section" id="projects">
   <div class="wrap">
     <div class="sec-head reveal">
-      <div class="layer-tag"><span class="dot"></span> Layer 01 · Hidden <span class="ln"></span></div>
+      <div class="layer-tag"><span class="dot"></span> Layer 01 · projects <span class="ln"></span></div>
       <h2>Projects</h2>
-      <div class="sub">Selected work — where ideas become interfaces.</div>
+      <div class="sub">Some of the things that I have built</div>
     </div>
-    <div class="proj-grid">
-      {#each projects as proj, i}
+    <div class="proj-grid proj-grid--home">
+      {#each projects.slice(0, 4) as proj, i}
         <article class="proj reveal" class:d1={i % 2 === 0} class:d2={i % 2 === 1}>
           <div class="proj-media">
             <img src={proj.img} alt={proj.title} />
@@ -153,9 +151,9 @@
 <section class="section" id="skills">
   <div class="wrap">
     <div class="sec-head reveal">
-      <div class="layer-tag"><span class="dot"></span> Layer 02 · Hidden <span class="ln"></span></div>
+      <div class="layer-tag"><span class="dot"></span> Layer 02 · skills <span class="ln"></span></div>
       <h2>Skills</h2>
-      <div class="sub">The activation functions.</div>
+      <div class="sub">Tools and technologies I use</div>
     </div>
     <div class="skills-grid">
 
@@ -169,7 +167,7 @@
           <h4>Languages</h4><span class="cnt">06</span>
         </div>
         <div class="chips">
-          <span>JavaScript</span><span>TypeScript</span><span>Python</span>
+          <span>Python</span><span>JavaScript</span><span>TypeScript</span>
           <span>C++</span><span>Java</span><span>SQL</span>
         </div>
       </div>
@@ -224,6 +222,34 @@
         </div>
       </div>
 
+      <div class="skill-card reveal d1">
+      <div class="sc-head">
+        <div class="ic">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-brain-circuit-icon lucide-brain-circuit" aria-hidden="true">
+            <path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/>
+            <path d="M9 13a4.5 4.5 0 0 0 3-4"/>
+            <path d="M6.003 5.125A3 3 0 0 0 6.401 6.5"/>
+            <path d="M3.477 10.896a4 4 0 0 1 .585-.396"/>
+            <path d="M6 18a4 4 0 0 1-1.967-.516"/>
+            <path d="M12 13h4"/>
+            <path d="M12 18h6a2 2 0 0 1 2 2v1"/>
+            <path d="M12 8h8"/>
+            <path d="M16 8V5a2 2 0 0 1 2-2"/>
+            <circle cx="16" cy="13" r=".5"/>
+            <circle cx="18" cy="3" r=".5"/>
+            <circle cx="20" cy="21" r=".5"/>
+            <circle cx="20" cy="8" r=".5"/>
+          </svg>
+        </div>
+        <h4>ML/AI</h4><span class="cnt">07</span>
+      </div>
+      <div class="chips">
+        <span>TensorFlow</span><span>PyTorch</span><span>Claude</span>
+        <span>ChatGPT</span><span>Neural Networks</span><span>NLP</span>
+        <span>HuggingFace</span>
+      </div>
+    </div>
+
     </div>
   </div>
 </section>
@@ -232,40 +258,48 @@
 <section class="section" id="resume">
   <div class="wrap">
     <div class="sec-head reveal">
-      <div class="layer-tag"><span class="dot"></span> Layer 03 · Hidden <span class="ln"></span></div>
+      <div class="layer-tag"><span class="dot"></span> Layer 03 · Resume <span class="ln"></span></div>
       <h2>Resume</h2>
-      <div class="sub">The trained weights, summarized.</div>
     </div>
-    <div class="resume-grid">
-      <div class="resume-cta reveal d1">
-        <h3>Full résumé</h3>
-        <p>The complete picture — education, projects, and stack — formatted for a quick read.</p>
-        <a class="btn primary" href="/resume.pdf" download style="padding:14px 22px;font-size:14px;">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M12 3v12M7 11l5 4 5-4M5 21h14"></path>
-          </svg>
-          Download PDF
-        </a>
-        <div class="meta"><span>PDF · one page</span><span>Updated 2025</span></div>
-      </div>
-      <div class="timeline reveal d2">
+    <div class="resume-viewer reveal d1">
+      <object data="/resume.pdf" type="application/pdf" width="100%" height="860" title="Nicklaus Marietta — Resume">
+        <p class="resume-fallback">PDF preview isn't supported in this browser. <a href="/resume.pdf" download>Download it instead</a>.</p>
+      </object>
+    </div>
+    <div class="resume-actions reveal d2">
+      <a class="btn primary" href="/resume.pdf" download>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M12 3v12M7 11l5 4 5-4M5 21h14"></path>
+        </svg>
+        Download PDF
+      </a>
+      <div class="meta"><span>PDF · one page</span><span>Updated 2025</span></div>
+    </div>
+    <div class="resume-grid" style="grid-template-columns:1fr">
+      <div class="timeline reveal d3">
         <div class="tl-item">
-          <div class="yr">2022 — Present</div>
+          <div class="yr">2026 — Present</div>
+          <h4>Open to Opportunities</h4>
+          <div class="org">Actively seeking full-time roles</div>
+          <p>Looking for software engineering or ML engineering positions where I can build impactful products and continue growing across the full stack.</p>
+        </div>
+        <div class="tl-item">
+          <div class="yr">Aug 2025 — May 2026</div>
+          <h4>ML Research Engineer Intern</h4>
+          <div class="org">Raytheon Applied Signal Technologies · Fullerton, CA</div>
+          <p>Built an RNN-based signal demodulator in TensorFlow/Keras; improved classification robustness 30% over baseline DSP. Awarded Best CS Project at CSUF Engineering Expo 2026.</p>
+        </div>
+        <div class="tl-item">
+          <div class="yr">May 2025 — Jun 2025</div>
+          <h4>Data Science Research Assistant</h4>
+          <div class="org">CIC PCUBED · Fullerton, CA</div>
+          <p>Engineered and benchmarked 4 ML models on a 1,000+ record dataset to predict student GPA, achieving 85%+ accuracy with the best-performing classifier.</p>
+        </div>
+        <div class="tl-item">
+          <div class="yr">Aug 2022 — May 2026</div>
           <h4>B.S. Computer Science</h4>
           <div class="org">Cal State Fullerton · Fullerton, CA</div>
-          <p>Studying algorithms, systems, and software engineering. Relevant coursework: Data Structures, Operating Systems, AI, Database Systems.</p>
-        </div>
-        <div class="tl-item">
-          <div class="yr">2024</div>
-          <h4>EcoNauts — Team Project</h4>
-          <div class="org">CSUF Senior Project</div>
-          <p>Led front-end development on an environmental placement platform connecting students with green internships.</p>
-        </div>
-        <div class="tl-item">
-          <div class="yr">2023</div>
-          <h4>SilverWare — Team Project</h4>
-          <div class="org">Full-Stack Collaboration</div>
-          <p>Co-built a restaurant management web app with ReactJS, Django, and AWS. Owned UI and deployment pipeline.</p>
+          <p>Relevant coursework: Data Structures, Algorithm Engineering, Software Engineering, Front End Web Engineering, Operating Systems, Database Systems.</p>
         </div>
       </div>
     </div>
@@ -276,9 +310,9 @@
 <section class="section" id="contact">
   <div class="wrap">
     <div class="sec-head reveal">
-      <div class="layer-tag"><span class="dot"></span> Layer 04 · Output <span class="ln"></span></div>
+      <div class="layer-tag"><span class="dot"></span> Layer 04 · Contact <span class="ln"></span></div>
       <h2>Contact</h2>
-      <div class="sub">Where the network resolves.</div>
+      <div class="sub">HMU to build something cool!</div>
     </div>
     <div class="contact-grid">
       <a class="contact-tile reveal d1" href="mailto:nickmarietta@live.com">
