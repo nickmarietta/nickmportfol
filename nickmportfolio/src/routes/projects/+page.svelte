@@ -38,7 +38,7 @@
     <div class="pg-head reveal">
       <a href="/" class="back-link">← Home</a>
       <div class="sec-head">
-        <div class="layer-tag"><span class="dot"></span> Layer 01 · Hidden <span class="ln"></span></div>
+        <div class="layer-tag"><span class="dot"></span> Layer 01 · Projects <span class="ln"></span></div>
         <h1>Projects</h1>
         <div class="sub">Selected work — where ideas become interfaces.</div>
       </div>
@@ -75,7 +75,6 @@
             <p class="desc">{proj.desc}</p>
             <div class="tags">{#each proj.tags as tag}<span>{tag}</span>{/each}</div>
             <div class="plinks">
-              <a href="/projects/{proj.slug}">↗ Details</a>
               {#each proj.links as link}
                 <a href={link.href} target="_blank" rel="noopener">{link.label}</a>
               {/each}
