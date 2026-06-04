@@ -1,8 +1,9 @@
 <script>
-  import { onMount } from 'svelte';
+  import { onMount, afterUpdate } from 'svelte';
   import { projects, allTags } from '$lib/projects.js';
 
   let activeTags = new Set();
+  let revealer;
 
   function toggleTag(tag) {
     const next = new Set(activeTags);
@@ -16,13 +17,18 @@
 
   onMount(() => {
     document.documentElement.classList.add('js-ready');
-    const revealer = new IntersectionObserver((entries) => {
+    revealer = new IntersectionObserver((entries) => {
       entries.forEach(e => {
         if (e.isIntersecting) { e.target.classList.add('in'); revealer.unobserve(e.target); }
       });
     }, { rootMargin: '0px 0px -10% 0px', threshold: 0.08 });
     document.querySelectorAll('.reveal').forEach(el => revealer.observe(el));
     return () => revealer.disconnect();
+  });
+
+  afterUpdate(() => {
+    if (!revealer) return;
+    document.querySelectorAll('.reveal:not(.in)').forEach(el => revealer.observe(el));
   });
 </script>
 
