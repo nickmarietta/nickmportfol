@@ -1,23 +1,23 @@
 export const projects = [
-  {
-    slug: "silverware",
-    num: "01",
-    featured: true,
-    title: "SilverWare",
-    img: "/images/Silverware.png",
-    desc: "A web application for restaurant owners to customize their store layout and manage operations. Built with a full-stack React + Django architecture deployed on AWS.",
-    tags: ["ReactJS", "Django", "AWS", "SQLite"],
-    links: [
-      { label: "↗ Code", href: "https://github.com/owendevita/Silverware" },
-    ],
-    problem:
-      "Restaurant owners lacked a simple, flexible tool to manage store layouts and daily operations without expensive, bloated POS systems.",
-    solution:
-      "A full-stack web application letting restaurant owners customize their floor plan, manage tables, and track operational data — all from a browser.",
-    role: "Co-developed the full stack — owned the React UI, contributed to the Django REST API, and managed the AWS EC2 deployment pipeline.",
-    gallery: 4,
-    architectureNodes: ["React SPA", "Django REST API", "AWS EC2", "SQLite"],
-  },
+  // {
+  //   slug: "silverware",
+  //   num: "01",
+  //   featured: true,
+  //   title: "SilverWare",
+  //   img: "/images/Silverware.png",
+  //   desc: "A web application for restaurant owners to customize their store layout and manage operations. Built with a full-stack React + Django architecture deployed on AWS.",
+  //   tags: ["ReactJS", "Django", "AWS", "SQLite"],
+  //   links: [
+  //     { label: "↗ Code", href: "https://github.com/owendevita/Silverware" },
+  //   ],
+  //   problem:
+  //     "Restaurant owners lacked a simple, flexible tool to manage store layouts and daily operations without expensive, bloated POS systems.",
+  //   solution:
+  //     "A full-stack web application letting restaurant owners customize their floor plan, manage tables, and track operational data — all from a browser.",
+  //   role: "Co-developed the full stack — owned the React UI, contributed to the Django REST API, and managed the AWS EC2 deployment pipeline.",
+  //   gallery: 4,
+  //   architectureNodes: ["React SPA", "Django REST API", "AWS EC2", "SQLite"],
+  // },
   {
     slug: "econauts",
     num: "02",
