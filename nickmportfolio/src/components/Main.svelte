@@ -10,6 +10,17 @@
     const railNodes = [...document.querySelectorAll('.rail .node')];
     const rail      = document.querySelector('.rail');
 
+    railNodes.forEach(n => {
+      n.addEventListener('click', () => {
+        const target = n.dataset.target;
+        if (target === 'top') {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        } else {
+          document.getElementById(target)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
     const spy = new IntersectionObserver((entries) => {
       entries.forEach(e => {
         if (!e.isIntersecting) return;
@@ -78,13 +89,12 @@
         </div>
         <div class="tag reveal d3"><span class="pulse-dot"></span> Open to opportunities</div>
       </div>
-      <div class="hero-index reveal d2">
-        <div class="h">Index</div>
-        <a href="#about">   <span>About</span>    <span class="n">01</span></a>
-        <a href="#projects"><span>Projects</span> <span class="n">02</span></a>
-        <a href="#skills">  <span>Skills</span>   <span class="n">03</span></a>
-        <a href="#resume">  <span>Resume</span>   <span class="n">04</span></a>
-        <a href="#contact"> <span>Contact</span>  <span class="n">05</span></a>
+      <div class="poke-hero reveal d2" aria-hidden="true">
+        <img
+          class="poke-sprite"
+          src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/658.png"
+          alt="Greninja"
+        />
       </div>
     </div>
   </div>
@@ -273,7 +283,7 @@
         </svg>
         Download PDF
       </a>
-      <div class="meta"><span>PDF · one page</span><span>Updated 2025</span></div>
+      <div class="meta"><span>PDF</span><span>Updated 2026</span></div>
     </div>
     <div class="resume-grid" style="grid-template-columns:1fr">
       <div class="timeline reveal d3">

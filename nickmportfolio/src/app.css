@@ -1,7 +1,3 @@
-/* ============================================================
-   Nicklaus Marietta — Portfolio
-   Neural-network themed, blueprint hero. Dark + light themes.
-   ============================================================ */
 
 :root {
   /* dark theme (default) */
@@ -130,6 +126,8 @@ a { color: inherit; text-decoration: none; }
 .theme-btn .ico-sun { display: none; }
 [data-theme="light"] .theme-btn .ico-sun { display: block; }
 [data-theme="light"] .theme-btn .ico-moon { display: none; }
+[data-theme="light"] .btn.primary { color: #fff; }
+[data-theme="light"] .brand .mark { color: #fff; }
 
 .btn {
   font-family: var(--ui); font-size: 14px; letter-spacing: .01em; white-space: nowrap;
@@ -173,13 +171,13 @@ a { color: inherit; text-decoration: none; }
   font-family: var(--mono); font-size: 11px; letter-spacing: .06em; color: var(--muted);
   white-space: nowrap; opacity: 0; pointer-events: none; transition: opacity .2s;
 }
-.rail .node:hover::before { opacity: 1; }
+.rail .node:hover::before { opacity: 1; pointer-events: auto; cursor: pointer; }
 .rail .node.active {
   background: var(--accent); border-color: var(--accent);
   box-shadow: 0 0 0 5px color-mix(in srgb, var(--accent) 22%, transparent), 0 0 18px var(--accent);
   transform: scale(1.18);
 }
-.rail .node.active::before { opacity: 1; color: var(--accent); }
+.rail .node.active::before { color: var(--accent); }
 
 /* ---------- hero ---------- */
 .hero { min-height: 100vh; display: flex; align-items: center; position: relative; padding-top: 90px; }
@@ -225,19 +223,29 @@ a { color: inherit; text-decoration: none; }
 }
 .hero-cta { display: flex; gap: 14px; margin-top: 30px; flex-wrap: wrap; }
 
-.hero-index { border-left: 1px solid var(--line); padding-left: 26px; }
-.hero-index .h {
-  font-family: var(--ui); font-size: 12px; letter-spacing: .16em;
-  color: var(--muted); text-transform: uppercase; margin-bottom: 14px;
+/* ---------- greninja sprite ---------- */
+.poke-hero {
+  display: flex; align-items: center; justify-content: center;
 }
-.hero-index a {
-  display: flex; justify-content: space-between; align-items: baseline;
-  padding: 14px 0; border-bottom: 1px solid var(--line);
-  font-family: var(--display); font-weight: 600; font-size: 18px;
-  transition: color .2s, padding-left .2s;
+.poke-sprite {
+  width: 260px; height: 260px; object-fit: contain;
+  transform-origin: bottom center;
+  filter: drop-shadow(0 16px 40px rgba(77,163,255,.45));
+  animation:
+    poke-enter .7s cubic-bezier(.22,.61,.36,1) both,
+    poke-idle  3.6s ease-in-out .7s infinite;
 }
-.hero-index a:hover { color: var(--accent); padding-left: 6px; }
-.hero-index a .n { font-family: var(--ui); font-size: 13px; color: var(--accent); }
+@keyframes poke-enter {
+  0%   { transform: translateX(120px); opacity: 0; }
+  100% { transform: translateX(0);     opacity: 1; }
+}
+@keyframes poke-idle {
+  0%   { transform: translateY(0)   rotate(0deg); }
+  25%  { transform: translateY(-9px) rotate(.9deg); }
+  50%  { transform: translateY(-14px) rotate(0deg); }
+  75%  { transform: translateY(-9px) rotate(-.9deg); }
+  100% { transform: translateY(0)   rotate(0deg); }
+}
 
 /* scroll cue */
 .scroll-cue {
@@ -440,10 +448,11 @@ a { color: inherit; text-decoration: none; }
 }
 
 /* ---------- responsive ---------- */
+
 @media (max-width: 1080px) {
   .rail { display: none; }
   .hero-inner { grid-template-columns: 1fr; }
-  .hero-index { display: none; }
+  .poke-hero { display: none; }
   .about-grid, .resume-grid { grid-template-columns: 1fr; gap: 40px; }
   .skills-grid { grid-template-columns: 1fr; }
   .contact-grid { grid-template-columns: 1fr; }
